@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break dan Continue</title>
+  </head>
+  <body>
+    <script>
+      // Break untuk menghentikan perulangan total
+
+      //   let i = 0;
+      //   while (true) {
+      //     document.writeln(`<p>Perulangan ke ${i}</p>`);
+      //     i++;
+      //     if (i > 5) {
+      //       break;
+      //     }
+      //   }
+
+      // Continue untuk menghentikan perulangan saat ini dan melalukukan pengulangan selanjutnya
+
+      for (let i = 1; i < 110; i++) {
+        if (i % 2 === 0) {
+          continue;
+        }
+        document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+      }
+    </script>
+  </body>
+</html>

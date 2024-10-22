@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const firtsName = "Zoday";
+      const middleName = "Extra";
+      const lastName = "Keju";
+      const template = `Name : ${firtsName} ${middleName} ${lastName}`;
+
+      console.info(template);
+
+      const name = "Pik";
+      const nilai = 90;
+      const template2 = `Name : ${name}, Lulus : ${nilai > 72}`;
+
+      console.info(template2);
+
+      const multiline = `Suka
+Makan
+Buah
+Naga`;
+
+      document.writeln("<pre>");
+      document.writeln(multiline);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

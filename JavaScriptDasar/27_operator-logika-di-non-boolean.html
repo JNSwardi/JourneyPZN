@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      console.info(1 || 0);
+      console.info(0 || false);
+      console.info(0 || "NOL");
+      console.info("" || []);
+      //OR kiri ke kanan
+      const person = {
+        name: "Pik",
+        age: 22,
+      };
+
+      const name = person.name || person.age;
+      console.info(name);
+
+      console.info(1 && 0);
+      console.info("Hello" && "0");
+      console.info(0 && "NOL");
+      console.info("" && 0);
+      //AND kana ke kiri
+      const name2 = person.name && person.age;
+      console.info(name2);
+    </script>
+  </body>
+</html>

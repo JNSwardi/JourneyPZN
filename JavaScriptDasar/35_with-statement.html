@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whit Statement</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Pik",
+        middleName: "Q",
+        lastName: "R",
+      };
+
+      const firstName = "Okta";
+      const lastName = "W";
+
+      with (person) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>
