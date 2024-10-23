@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive Function</title>
+  </head>
+  <body>
+    <script>
+      // factorial loop
+      function factorial(n) {
+        let result = 1;
+        for (let i = 1; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      }
+      console.info(factorial(7));
+
+      // factorial recursive
+      function factorialRecursive(n) {
+        if (n === 1) {
+          return 1;
+        } else {
+          return n * factorialRecursive(n - 1);
+        }
+      }
+
+      console.info(factorialRecursive(7));
+
+      factorialRecursive(7);
+      // 7 * factorialRecursive(6)
+      // 7 * 6 * factorialRecursive(5)
+      // 7 * 6 * 5 * factorialRecursive(4)
+      // 7 * 6 * 5 * 4 * factorialRecursive(3)
+      // 7 * 6 * 5 * 4 * 3 * factorialRecursive(2)
+      // 7 * 6 * 5 * 4 * 3 * 2 * factorialRecursive(1)
+      // 7 * 6 * 5 * 4 * 3 * 2 * 1
+    </script>
+  </body>
+</html>

@@ -6,6 +6,23 @@
     <title>Anonymous Function</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      // memasukan anonymous function kedalam variable
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}!</p>`);
+      };
+
+      say("John");
+      say("Pik");
+
+      // memasukan anonymous function kedalam parameter
+      function sayHello(callback) {
+        callback("John");
+      }
+
+      sayHello(function (name) {
+        document.writeln(`<p>Hi ${name}!</p>`);
+      });
+    </script>
   </body>
 </html>
