@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masalah Variable var</title>
+  </head>
+  <body>
+    <script>
+      // var tidak memiliki block scope
+      //   //global scope
+      //   var a = 10;
+
+      //   for (var a = 0; a < 10; a++) {
+      //     //local scope
+      //     console.info(`Local Scope: ${a}`);
+      //   }
+
+      //   console.info(`Global Scope: ${a}`);
+
+      // berbeda dengan let yang memliki block scope
+      //global scope
+      let a = 10;
+
+      for (let a = 0; a < 10; a++) {
+        //local scope
+        console.info(`Local Scope: ${a}`);
+      }
+
+      console.info(`Global Scope: ${a}`);
+    </script>
+  </body>
+</html>

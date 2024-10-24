@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter dan Setter</title>
+  </head>
+  <body>
+    <script>
+      //kemampuan untuk mengambil dan mengubah data
+
+      //getter
+      const person = {
+        firstName: "Asep",
+        lastName: "Kurniawan",
+        get fullName() {
+          //mengubah propertinya menjadi fungsi
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(value) {
+          //mengubah datanya
+          const array = value.split(" ");
+          this.firstName = array[0];
+          this.lastName = array[1];
+        },
+      };
+
+      person.fullName = "Pik R";
+      console.table(person);
+    </script>
+  </body>
+</html>

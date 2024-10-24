@@ -6,6 +6,24 @@
     <title>Object Method</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      //function bisa di masukan kedalam object
+      const person = {
+        name: "Pik",
+        sayHello: function (name) {
+          alert(`Hello ${name}`);
+        },
+      };
+
+      const person2 = {
+        name: "Jack",
+      };
+      person2.sayHello = function (name) {
+        alert(`Hello ${name}`);
+      };
+
+      person.sayHello("Pik");
+      person2.sayHello("Jack");
+    </script>
   </body>
 </html>

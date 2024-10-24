@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method di Constructor Function</title>
+  </head>
+  <body>
+    <script>
+      function Person() {
+        this.firstName = "";
+        this.lastName = "";
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, My name is ${this.firstName}`);
+        };
+      }
+
+      const ucup = new Person();
+      ucup.firstName = "Ucup";
+      ucup.lastName = "Sanjaya";
+      ucup.sayHello("John");
+
+      const rudi = new Person();
+      rudi.firstName = "Rudi";
+      rudi.lastName = "Jaya";
+      rudi.sayHello("John");
+
+      console.info(ucup);
+      console.info(rudi);
+    </script>
+  </body>
+</html>

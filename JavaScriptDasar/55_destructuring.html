@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      {
+        //destructuring array
+        const names = ["Asep", "Budi", "Caca"];
+        const [name1, name2, name3] = names;
+
+        console.info(name1);
+        console.info(name2);
+        console.info(name3);
+      }
+
+      {
+        //destructuring object
+        const person = {
+          name: "Pik",
+          age: 22,
+          address: {
+            country: "Indonesia",
+            city: "Bandung",
+          },
+          hobby: "Coding",
+        };
+
+        const { name, age, address, ...others } = person;
+        console.info(name);
+        console.info(age);
+        console.info(address);
+        console.info(others);
+      }
+
+      {
+        //destructuring parameter object
+        function sayHello(firstName, middleName, lastName) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Pik",
+          middleName: "Q",
+          lastName: "R",
+        };
+
+        sayHello(person);
+      }
+
+      {
+        //destructuring parameter array
+        function sum([a, b]) {
+          return a + b;
+        }
+
+        console.info(sum([10, 10]));
+        console.info(sum([20, 10]));
+      }
+
+      {
+        //destructuring default value
+        const person = {
+          firstName: "Pik",
+          lastName: "R",
+        };
+
+        let { firstName, middleName = "Q", lastName } = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      {
+        //mengubah nama variabel
+        const person = {
+          firstName: "Pik",
+          lastName: "R",
+        };
+
+        let {
+          firstName: namaDepan,
+          middleName: namaTengah = "Q",
+          lastName: namaBelakang,
+        } = person;
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>
