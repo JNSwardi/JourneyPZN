@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator instanceof</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        sayHello() {
+          console.info("Hello");
+        }
+      }
+
+      class Manager extends Employee {}
+
+      const pik = new Employee();
+      const joni = new Manager();
+
+      console.info(typeof pik); //object
+      console.info(typeof joni); //object
+
+      console.info(pik instanceof Employee); //true
+      console.info(pik instanceof Manager); //false
+
+      console.info(joni instanceof Employee); //true
+      console.info(joni instanceof Manager); //true
+    </script>
+  </body>
+</html>

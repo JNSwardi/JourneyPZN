@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Method</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        say(name) {
+          if (name) {
+            return this.#sayHelloWithName(name);
+          } else {
+            return this.#sayHelloWithoutName();
+          }
+        }
+
+        #sayHelloWithName(name) {
+          console.info(`Hello ${name}!`);
+        }
+
+        #sayHelloWithoutName() {
+          console.info("Hello!");
+        }
+      }
+
+      const pik = new Person();
+      pik.say("Joni");
+      pik.say();
+    </script>
+  </body>
+</html>
