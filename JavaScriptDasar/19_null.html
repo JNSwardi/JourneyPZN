@@ -16,6 +16,15 @@
       } else {
         alert(firstName);
       }
+
+      function hello(name, origin = "Bandung") {
+        return `Halo! Nama saya, ${name} Saya tinggal di ${origin}.`;
+      }
+
+      const rahmat = hello("Rahmat", "Semarang");
+      console.log(rahmat);
+      const indra = hello("Indra");
+      console.log(indra);
     </script>
   </body>
 </html>
