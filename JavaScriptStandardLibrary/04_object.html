@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Pik",
+        lastName: "R",
+      };
+
+      //   Object.freeze(person);
+      Object.seal(person);
+
+      person.firstName = "John";
+      person.middleName = "Doe";
+      console.info(person);
+    </script>
+  </body>
+</html>
